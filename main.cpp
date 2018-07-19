@@ -103,8 +103,8 @@ int main() {
 	ASISetControlValue(l, ASI_BANDWIDTHOVERLOAD, 40, ASI_FALSE);
 	char cap = 'c';
 	int count = 0;
-	for (int i = 0; i < 20; ++i) {
-		//while (cap == 'c') {
+	
+		while (cap == 'c') {
 		ASI_EXPOSURE_STATUS status;
 		ASIStartExposure(r, ASI_FALSE);
 		ASIStartExposure(l, ASI_FALSE);
@@ -144,9 +144,9 @@ int main() {
 		count++;
 
 		Beep(750, 300);
-		Sleep(3000);
+		
 		cout << "Enter 'c' to take another picture: " << endl;
-		//cin >> cap;
+		cin >> cap;
 		system("CLS");
 	}
 	Sleep(1000);
